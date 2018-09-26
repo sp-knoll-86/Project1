@@ -9,6 +9,7 @@ L.tripgoRouting.routeService = (function () {
     const transportModes = ["pt_pub", "ps_tax", "me_car", "me_mot", "cy_bic", "wa_wal", "ps_tax_MYDRIVER", "ps_tnc_UBER",
         "me_car-r_SwiftFleet", "me_car-p_BlaBlaCar", "cy_bic-s"];
     const baseURL = "https://api.tripgo.com/v1/routing.json?v=11&locale=en";
+    
 
     function getUrl(from, to, mode){
         let url = baseURL +  mode;
@@ -17,12 +18,15 @@ L.tripgoRouting.routeService = (function () {
     }
 
     var requirements = transportModes.length + 1;
+    
     function getRoutes(url, apiKey) {
+        
         // make the request to SkedGo backend
         $.ajax({
             url         : url,
             dataType    : "json",
             beforeSend: function(xhr){
+            
                 xhr.setRequestHeader('X-TripGo-Key', apiKey);
             },
             success     : function(result) {
@@ -84,6 +88,7 @@ L.tripgoRouting.routeService = (function () {
         *       to: leaflet latlng
         * */
         route : function(tripgoApiKey, from, to){
+            
             if(L.tripgoRouting.validLatLng(from) && L.tripgoRouting.validLatLng(to)){
                 L.tripgoRouting.mapLayer.getMessenger().info("getting routes form SkedGo server ...");
                 let multimodal =  "";

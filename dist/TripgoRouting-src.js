@@ -69,7 +69,7 @@ L.tripgoRouting.mapLayer = function () {
         }).addTo(map);
     };
 
-    let defaultApiKey = "d72e9c4da23eec14ea56f4065abd95c8";
+    let defaultApiKey = "dfd9065d21ca22646f0448d6499b15b3";  
     let defaultOptions = {
         "mapId": "map",
         "gogoleTile": true,
