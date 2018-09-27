@@ -1,0 +1,52 @@
+/* body {
+    background-color: rgb(79, 228, 143);
+} */
+
+#header {
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    line-height: 250px;
+    height: 250px;
+    width: 100%;
+}
+
+#description {
+    text-align: right;
+    height: 250px;
+    width: 100%;
+}
+
+#images {
+    margin-top: 20px;
+}
+
+#topImages {
+    height: 250px;
+    width: 100%;
+}
+
+#bottomImages {
+    height: 250px;
+    width: 100%;
+}
+
+#img1 {
+    margin-bottom: 10px;
+    margin-right: -150px;
+    clip-path: polygon(100% 0, 50% 100%, 0 0);
+}
+
+#img2 {
+    margin-bottom: 10px;
+    clip-path: polygon(100% 100%, 50% 0, 0 100%);
+}
+
+#img3 {
+    margin-right: -150px;
+    clip-path: polygon(100% 100%, 50% 0, 0 100%);
+}
+
+#img4 {
+    clip-path: polygon(100% 0, 50% 100%, 0 0);
+}
