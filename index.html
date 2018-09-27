@@ -1,38 +1,24 @@
-<!DOCTYPE html>
+<html>
   <head>
-    
-    <title>Your Triply Routing Service</title>
-  
-    <link rel="shortcut icon" href="images/favicon.ico">
-    <!-- leaflet css -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css"/>
-    <!-- leaflet js -->
-    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
+    <script src="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css"/>
 
-    <link rel="stylesheet" href="css/TripgoRouting.css"/>
-    <script src="dist/TripgoRouting.js"></script>
-    <script src="lib/Polyline.encoded.js"></script>
-    <script src="lib/jquery-3.2.1.js"></script>
+    <script type="text/javascript">
+      window.onload = function() {
+        L.mapquest.key = '18qqITUGU3w7tOQGNQbuQMmBOyVEAGOB';
 
-  </head>
-  <body>
-    <div id="map"></div>
-    
-    <script>
-        let options ={
-            "mapId" : "map",
-            "googleTile": true,
-            "mapCenter" : {
-                "lat": 39.09973,
-                "lng": -94.5786
-            },
-            "floatPanel": false,
-            "tripgoApiKey": "dfd9065d21ca22646f0448d6499b15b3"
-        }
-        L.tripgoRouting.mapLayer.initialize(options);
+        var map = L.mapquest.map('map', {
+          center: [37.7749, -122.4194],
+          layers: L.mapquest.tileLayer('map'),
+          zoom: 12
+        });
+
+        map.addControl(L.mapquest.control());
+      }
     </script>
+  </head>
 
-
-
+  <body style="border: 0; margin: 0;">
+    <div id="map" style="width: 100%; height: 530px;"></div>
   </body>
 </html>

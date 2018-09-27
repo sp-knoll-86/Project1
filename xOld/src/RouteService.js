@@ -104,4 +104,18 @@ L.tripgoRouting.routeService = (function () {
             }
         },
     }
-})();
+
+    L.tripgoRouting.mapLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+
+L.Routing.control({
+    waypoints: [
+        L.tripgoRouting.mapLayer(39.110298, -94.571078),
+        L.tripgoRouting.mapLayer(39.110298, -94.671078)
+    ]
+}).addTo(map);
+
+
+
+})(); // end ajax calling

@@ -3,6 +3,8 @@ body{
 	font-family: ProximaNova-Regular, sans-serif;
 }
 
+
+
 .addressSelector{
 	line-height: 2.4;
 	cursor: pointer;
@@ -15,7 +17,7 @@ body{
 .selectorPanel{
 	background-color: #eceef1;
 	float:left;
-	width:400px;
+	width:382px;
 	display:none;
 	overflow-x: scroll;
 }
